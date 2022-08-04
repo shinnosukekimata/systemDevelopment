@@ -18,7 +18,6 @@ public class UserUpdateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection users = null;
 		try {
-			request.setCharacterEncoding("utf-8");
 			users = DBConnection.openConnection();
 			String id = request.getParameter("updateId");
 			String name = request.getParameter("updateName");
